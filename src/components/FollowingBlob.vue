@@ -33,6 +33,7 @@ const blob = ref<HTMLElement | null>(null);
     <div class="blur-[12vmax]">
       <div
         class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-96 aspect-square absolute x-[50%] y-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full"
+        :style="{ left: x + 'px', top: y + 'px' }"
         ref="blob"
       />
     </div>
