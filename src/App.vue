@@ -3,29 +3,17 @@ import { ref, onMounted } from "vue";
 
 import Notes from "./components/Notes.vue";
 import APITests from "./components/APITests.vue";
-
-const hero = ref<HTMLElement | null>(null);
-const second = ref<HTMLElement | null>(null);
-
-const scrollToElement = (scrollTarget: HTMLElement | null) => {
-  if (scrollTarget) {
-    scrollTarget.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
-// Run the scrollToElement function when the component is mounted
-onMounted(() => scrollToElement(hero.value));
+import ScrollToElement from "./components/ScrollToElement.vue";
+import BurgerMenu from "./components/BurgerMenu.vue";
+import FollowingBlob from "./components/FollowingBlob.vue";
 </script>
 
 <template>
   <!-- <Notes />
-  <APITests /> -->
-  <div class="sticky top-0">
-    <button @click="scrollToElement(hero)">Main</button>
-    <button @click="scrollToElement(second)">Second</button>
-  </div>
-  <div class="h-screen w-full bg-red-500" ref="hero"></div>
-  <div class="h-screen w-full bg-blue-500" ref="second"></div>
+  <APITests />
+  <ScrollToElement /> 
+  <BurgerMenu /> -->
+  <FollowingBlob />
 </template>
 
 <style>
